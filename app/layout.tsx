@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import './globals.css'
+import SponsorFooter from '@/components/sponsor-footer'
 
 export const metadata: Metadata = {
   title: 'Software Modeling',
@@ -14,7 +15,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body suppressHydrationWarning>{children}</body>
+      <body suppressHydrationWarning>
+        {children}
+        <SponsorFooter />
+      </body>
     </html>
   )
 }
