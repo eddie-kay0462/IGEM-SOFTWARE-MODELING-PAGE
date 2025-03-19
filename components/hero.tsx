@@ -51,17 +51,17 @@ export default function Hero() {
             duration: 0.8, 
             ease: "easeOut",
             rotate: {
-              duration: 4,
+              duration: 2,
               repeat: Infinity,
               ease: "easeInOut"
             },
             x: {
-              duration: 4,
+              duration: 2,
               repeat: Infinity,
               ease: "easeInOut"
             },
             y: {
-              duration: 4,
+              duration: 2,
               repeat: Infinity,
               ease: "easeInOut"
             }
@@ -79,33 +79,16 @@ export default function Hero() {
           animate={{ 
             opacity: 1, 
             scale: 1,
-            rotate: [0, -3, 0],
-            x: [0, -8, 0],
-            y: [0, -4, 0],
           }}
           transition={{ 
             duration: 0.5, 
             delay: 0.3,
-            rotate: {
-              duration: 5,
-              repeat: Infinity,
-              ease: "easeInOut"
-            },
-            x: {
-              duration: 5,
-              repeat: Infinity,
-              ease: "easeInOut"
-            },
-            y: {
-              duration: 5,
-              repeat: Infinity,
-              ease: "easeInOut"
-            }
           }}
           className="mt-4 text-xl text-violet-100"
           style={{
-            transform: isMounted ? `translate(${(mousePosition.x - dimensions.width / 2) * 0.02}px, ${(mousePosition.y - dimensions.height / 2) * 0.02}px)` : 'none',
+            transform: isMounted ? `translate(${(mousePosition.x - dimensions.width / 2) * 0.05}px, ${(mousePosition.y - dimensions.height / 2) * 0.05}px) rotate(0deg)` : 'none',
             transition: "transform 0.1s ease-out",
+            transformOrigin: "center",
           }}
         >
           Transforming Ideas into Digital Reality
