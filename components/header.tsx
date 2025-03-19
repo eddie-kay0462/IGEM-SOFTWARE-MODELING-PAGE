@@ -64,15 +64,15 @@ export default function Header() {
           </button>
 
           {/* Center logo */}
-          <div className="absolute left-1/2 transform -translate-x-1/2 transition-all duration-300 hover:scale-110">
+          <div className="absolute left-1/2 transform -translate-x-1/2 top-4 md:top-2 transition-all duration-300 hover:scale-105">
             <Link href="/">
-              <div className="relative w-12 h-12 rounded-full bg-gradient-to-br from-amber-300 to-amber-500 p-0.5 shadow-lg shadow-purple-900/30">
+              <div className="relative w-20 h-20 md:w-24 md:h-24">
                 <Image
-                  src="/placeholder.svg?height=48&width=48"
+                  src="/general/ashesi-igem-2024-logo.png"
                   alt="Logo"
-                  width={48}
-                  height={48}
-                  className="rounded-full"
+                  fill
+                  className="object-contain"
+                  priority
                 />
               </div>
             </Link>
@@ -135,4 +135,3 @@ export default function Header() {
     </header>
   )
 }
-
