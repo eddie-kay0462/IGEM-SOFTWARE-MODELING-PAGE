@@ -20,6 +20,10 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
+  const handleClick = (e: React.MouseEvent) => {
+    e.preventDefault()
+  }
+
   return (
     <header
       className={cn(
@@ -36,7 +40,7 @@ export default function Header() {
             {["Home", "Parts", "Team", "Project"].map((item) => (
               <Link
                 key={item}
-                href={`/${item.toLowerCase()}`}
+                href="/"
                 className={cn(
                   "text-sm font-medium relative px-2 py-1 transition-all duration-300",
                   "hover:text-amber-300 group",
@@ -83,7 +87,7 @@ export default function Header() {
             {["Safety", "Human Practices", "Awards"].map((item) => (
               <Link
                 key={item}
-                href={`/${item.toLowerCase().replace(" ", "-")}`}
+                href="/"
                 className={cn(
                   "text-sm font-medium relative px-2 py-1 transition-all duration-300",
                   "hover:text-amber-300 group",
@@ -114,7 +118,7 @@ export default function Header() {
             {["Home", "Parts", "Team", "Project", "Safety", "Human Practices", "Awards"].map((item) => (
               <Link
                 key={item}
-                href={`/${item.toLowerCase().replace(" ", "-")}`}
+                href="/"
                 className={cn(
                   "text-sm font-medium transition-all duration-300 py-2 px-2 rounded-md",
                   activeItem === item
